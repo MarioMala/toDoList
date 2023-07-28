@@ -1,5 +1,8 @@
+/** @format */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;500;700&family=Oswald:wght@200;300;400;500;700&family=Roboto:wght@100;300;700&family=Teko:wght@300;400;700&family=Ubuntu+Condensed&display=swap");
-*, after, before {
+*,
+after,
+before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -23,6 +26,79 @@ body {
   align-items: center;
   font-family: var(--fontIBM);
   color: #fff;
+  position: relative;
+}
+
+.modal-edit {
+  min-height: 20rem;
+  min-width: 40rem;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform: translateX(-50%);
+  border: 1px solid #ffffff;
+  background-color: #fff;
+  box-shadow: 18px 14px 30px 6px #ffffff;
+  z-index: 10;
+}
+
+.input-newtext {
+  min-width: 90%;
+  min-height: 2.5rem;
+  margin-bottom: 5rem;
+  padding-left: 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  outline: none;
+  background-color: gray;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.modal-edit h2 {
+  color: #000;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-radius: 0.6rem;
+  font-family: var(--fontTeko);
+}
+
+.btn-box {
+  display: flex;
+  justify-content: space-around;
+  min-width: 90%;
+}
+
+.btn-confirm {
+  min-width: 10rem;
+  padding: 0.5rem 2rem;
+  background-color: #808080;
+  border: none;
+  border-radius: 0.6rem;
+  outline: none;
+  color: #fff;
+  transition: all 0.5s, color 0.5s;
+}
+
+.btn-cancel {
+  min-width: 10rem;
+  padding: 0.5rem 2rem;
+  background-color: #808080;
+  border: none;
+  border-radius: 0.6rem;
+  outline: none;
+  color: #fff;
+  transition: all 0.5s, color 0.5s;
+}
+
+.btn-confirm:hover, .btn-cancel:hover {
+  color: #fff;
+  background-color: #453b3b;
+  font-weight: bold;
 }
 
 h1 {
