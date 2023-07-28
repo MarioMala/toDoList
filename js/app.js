@@ -65,13 +65,16 @@ const addTask = () => {
                   </div>
                </div>
             `;
+					const textValue = document.querySelector('.task-text');
 					const modalEdit = document.querySelector('.modal-edit');
 					const inputNew = document.querySelector('.modal-edit .input-newtext');
 					const btnOK = document.querySelector('.modal-edit .btn-confirm');
 					const btnCancel = document.querySelector('.modal-edit .btn-cancel');
 					inputNew.value = newText;
-					btnOK.addEventListener('click', () => {
-						 input.value = inputNew.value;
+					btnOK.addEventListener('click', e => {
+						console.log(e.target);
+						textTask = inputNew.value;
+						textValue.textContent = textTask;
 						modalEdit.remove();
 					});
 					btnCancel.addEventListener('click', () => {
@@ -84,3 +87,4 @@ const addTask = () => {
 };
 
 formBtn.addEventListener('click', addTask);
+
